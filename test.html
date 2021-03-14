@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function dropdownStart(view)
+            {
+                console.log(view.parentNode.childNodes[1]);
+                var dropdownContain = document.getElementById("dropdown-content-start");
+                dropdownContain.style.display = "block";
+            }
+           
+        </script>
+        
+
+    </head>
+
+    <body>
+        <fieldset style="display: block; width: 40vh;">
+            <legend>Phone No.</legend>
+              <input id="phone-no" style="border:none;outline:none;"/>
+          </fieldset>
+          <script>
+               const inputDiv= document.getElementById("phone-no");
+               let timer;
+            inputDiv.addEventListener("input",function(){
+                console.log(inputDiv.value);
+                clearTimeout(timer);
+                timer = setTimeout(function(){
+                    console.log("Timer");
+                },1000);
+
+            });
+          </script>
+    </body>
+</html>
